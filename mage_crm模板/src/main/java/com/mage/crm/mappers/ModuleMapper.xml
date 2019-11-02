@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mage.crm.dao.ModuleDao">
+
+
+    <select id="queryAllsModuleDtos" parameterType="int" resultType="moduleDto">
+        select
+            id,module_name as 'name',parent_id as 'pId'
+        from
+            t_module
+        where
+            is_valid=1
+    </select>
+</mapper>
+
